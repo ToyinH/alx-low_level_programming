@@ -7,9 +7,9 @@
 
 int main(void)
 {
-	int n = 'a';
-	while (n <= 'z')
-		putchar(n);
-		n++;
+	int ch = 'a';
+	while (ch <= 'z')
+		putchar(ch);
+		ch++;
 	return (0);
 }
