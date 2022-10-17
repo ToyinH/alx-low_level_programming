@@ -9,9 +9,9 @@
  * Return: 0 if successful
  */
 
-int main(main)
+int main(void)
 {
-	int n,m;
+	int n, m;
 
 	for (n = 48; n <= 56; n++)
 	{
@@ -21,8 +21,8 @@ int main(main)
 			{
 				putchar(n);
 				putchar(m);
-				if (n != 56 || m !=57)
-				{	
+				if (n != 56 || m != 57)
+				{
 				putchar(',');
 				putchar(' ');
 				}
