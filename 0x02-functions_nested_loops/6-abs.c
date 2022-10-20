@@ -2,14 +2,13 @@ include "main.h"
 
 /**
  * _abs - computes absolute value of integer
+ * @n: integer
  * Return: absolute value 
  *
  */
 
-int _abs(int)
+int _abs(int n)
 {
-	int n;
-
 	if (n > 0)
 		return (n);
 	else if (n == 0)
