@@ -5,7 +5,8 @@
  * @n: integer
  * Return: last digit
  *
- *\
+ *
+ */
 
  int print_last_digit(int n)
  {
@@ -14,5 +15,5 @@
 	if (m >= 0);
 		return (m);
 	else
-	return (-m);
+		return (-m);
  }
