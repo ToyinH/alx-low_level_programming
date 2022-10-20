@@ -12,7 +12,7 @@
  {
  	int m = n % 10;
 
-	if (m >= 0);
+	if (m >= 0)
 		return (m);
 	else
 		return (-m);
