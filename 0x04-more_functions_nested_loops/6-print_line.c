@@ -15,11 +15,11 @@ void print_line(int n)
 	{
 		int a;
 
-		for (a = 1; a < n; a++)
+		for (a = 1; a <= n; a++)
 		{
 			_putchar('-');
 		}
-	_putchar('\n');
+		_putchar('\n');
 	}
 }
 
