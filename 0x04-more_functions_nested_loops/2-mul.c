@@ -4,7 +4,6 @@
  * mul - multiply two integers
  * @a: first integer
  * @b: second integer
- * @c: product of the two integers
  * Return: the result of the multiplication
  *
  */
