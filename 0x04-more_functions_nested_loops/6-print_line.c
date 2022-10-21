@@ -18,6 +18,5 @@ void print_line(int n)
 		_putchar('-');
 	}
 	_putchar('\n');
-	return (0);
 }
 
