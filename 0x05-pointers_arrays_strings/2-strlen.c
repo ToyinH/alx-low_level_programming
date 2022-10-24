@@ -3,7 +3,6 @@
 /**
  * _strlen - function that returns the length of a string
  * @s: character
- * @i: number or length
  * Return: return the string length
  *
  */
