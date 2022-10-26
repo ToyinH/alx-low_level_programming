@@ -15,6 +15,10 @@ void print_rev(char *s)
 	}
 	for (y = len; y >= 0; y--)
 	{
+		if (s[len] = '\0')
+		{
+			_putchar();
+		}
 		_putchar(s[y]);
 	}
 	_putchar('\n');
