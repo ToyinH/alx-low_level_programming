@@ -15,9 +15,9 @@ void print_rev(char *s)
 	}
 	for (y = len; y >= 0; y--)
 	{
-		if (s[len] == '\0')
+		if (y = 0)
 		{
-			_putchar('\0');
+			return (void);
 		}
 		_putchar(s[y]);
 	}
