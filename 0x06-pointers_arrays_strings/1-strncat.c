@@ -22,13 +22,14 @@ char *_strncat(char *dest, char *src, int n)
 	}
 	for (i = c, j = 0; src[j] != '\0'; j++, i++)
 	{
-		if (j <= n)
+		if (j < n)
 		{
 			dest[i] = src[j];
+			dest[i] = '\0';
 		}
-		else
+		else if (j == n)
 		{
-			continue;
+			dest[i] = src[j];
 		}
 	}
 	return (dest);
