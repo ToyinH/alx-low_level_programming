@@ -5,9 +5,10 @@
  * Return: return uppercase
  *
  */
-char *string_toupper(char *)
+char *string_toupper(char *s)
 {
 	int i;
+	int j;
 	
 	for (i = 0; s[i] != ('\0'); i++, j++)
 	{
