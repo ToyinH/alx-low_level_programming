@@ -2,19 +2,20 @@
 
 /**
  * *string_toupper - changes all lowercase of a string to uppercase
+ * @s: character
  * Return: return uppercase
  *
  */
 char *string_toupper(char *s)
 {
 	int i;
-	int j;
-	
-	for (i = 0; s[i] != ('\0'); i++, j++)
+
+	for (i = 0; s[i] != ('\0'); i++)
 	{
-		for (i = j, j = 'a'; j <= 'z'; j++)
+		if (s[i] >= 97 && s[i] <= 122)
 		{
-			_putchar(j - 32);
+			s[i] = s[i] - 32;
 		}
 	}
+	return (s);
 }
