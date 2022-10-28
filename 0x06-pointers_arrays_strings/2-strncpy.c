@@ -4,7 +4,6 @@
  * @dest: string
  * @src: string
  * @n: character to copy
- * @i: integer
  * Return: edited string
  */
 char *_strncpy(char *dest, char *src, int n)
@@ -13,7 +12,7 @@ char *_strncpy(char *dest, char *src, int n)
 
 	for (i = 0; i < n && src[i] != '\0'; i++)
 	{
-		dest[i] = src [i];
+		dest[i] = src[i];
 	}
 	for (; n > i; i++)
 	{
