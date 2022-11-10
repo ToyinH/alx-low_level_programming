@@ -28,7 +28,7 @@ char *str_concat(char *s1, char *s2)
 		if (c < i)
 			a[c] = s1[c];
 		else
-			a[c] = s2[d++]
+			a[c] = s2[d++];
 	}
 	return (a);
 }
