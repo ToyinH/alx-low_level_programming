@@ -9,16 +9,10 @@
  *
  *
  */
-int int_index(int *array, int size, int (*cmp)(int))
+void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	int i;
-
-	if (size < 1 || array == NULL || cmp == NULL)
-		return(-1);
+	size_t i;
+	
 	for (i = 0; i < size; i++)
-	{
-		if (cmp(array[i]))
-			return (i);
-	}
-	return (-1);
+		action(array[i]);
 }
