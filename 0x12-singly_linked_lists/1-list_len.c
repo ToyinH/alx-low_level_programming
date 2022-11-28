@@ -7,13 +7,13 @@
  * @h: head of linked list
  * Return: return number of elements
  */
+
 size_t list_len(const list_t *h)
 {
 	const list_t *current;
 	current = h;
-
-
-	size_t c = 0;
+	size_t c;
+	c = 0;
 
 	while (current != NULL)
 	{
