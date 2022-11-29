@@ -1,6 +1,5 @@
 #ifndef LIST_H
 #define LIST_H
-#include <stdio.h>
 #include <stddef.h>
 #include <stdlib.h>
 
@@ -13,7 +12,7 @@
  * Description: singly linked list node structure
  *
  */
-typedef struct listing_s
+typedef struct listint_s
 {
 	int n;
 	struct listint_s *next;
