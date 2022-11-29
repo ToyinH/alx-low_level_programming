@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * listing_len - function that returns the number of elements in a
+ * listint_len - function that returns the number of elements in a
  * linked listint_t list
  * @h: head of the linked list
  * Return: returns the number of elements
@@ -15,7 +15,7 @@ size_t listint_len(const listint_t *h)
 	size_t c;
 
 	c = 0;
-	current = head;
+	current = h;
 	while (current != NULL)
 	{
 		c++;
