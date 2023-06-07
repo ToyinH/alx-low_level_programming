@@ -18,6 +18,17 @@ int _pow_recursion(int x, int y)
 	{
 		return (1);
 	}
+
+	/* 
+	 * you may want to add this section of code too. 
+	 * either way, it will work. 
+	 * else if (y == 1)
+	* {
+	*	return (x);
+	* }
+	*
+	*/
+	
 	else
 	{
 		return (x * _pow_recursion(x, y - 1));
