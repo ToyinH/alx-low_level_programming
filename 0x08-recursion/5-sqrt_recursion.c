@@ -5,18 +5,21 @@
 /**
  * _sqrt_recursion - function that returns the natural square root of a number
  * test - testing the guess for the squareroot
- * closeEnough - function that return true or false to close enough guess to
+ * closeEnough: function that return true or false to close enough guess to
  * square root of number
- * betterGuess - function that returns the betterGuess than the closeEnough
+ * betterGuess: function that returns the betterGuess than the closeEnough
  * @n - the number
- * @x - the number to find its squareroot
- * @g - the guess number
- * return: the square of the number
- *
+ * @x: the number to find its squareroot
+ * @g: the guess number
+ * Return: the square of the number
  *
  */
 
 double test(double x, double g);
+/**
+ * @x: the number to test
+ * @g: guess number
+ */
 bool closeEnough(double a, double b);
 double betterGuess(double x, double g);
 
@@ -38,6 +41,10 @@ int _sqrt_recursion(int n)
 }
 
 double test(double x, double g)
+/**
+ * test - function to testing the guess
+ *
+ */
 {
 	if (closeEnough(x / g, g))
 	{
@@ -45,11 +52,15 @@ double test(double x, double g)
 	}
 	else
 	{
-		return test(x, betterGuess(x, g));
+		return (test(x, betterGuess(x, g)));
 	}
 }
 
 bool closeEnough(double a, double b)
+/**
+ * closeEnough -function returns true for closeEnough squareroot
+ *
+ */
 {
 	if (fabs(a - b) < 0.001)
 	{
@@ -62,6 +73,10 @@ bool closeEnough(double a, double b)
 }
 
 double betterGuess(double x, double g)
+/**
+ * betterGuess - funtion that returns betterguess
+ *
+ */
 {
 	return ((g + x / g) / 2);
 }
