@@ -26,15 +26,15 @@ int is_palindrome_helper(char *s, int low, int high)
 	{
 		return 0;
 	}
-	return is_palindrome_helper(s, low++, high--);
+	return is_palindrome_helper(s, low + 1, high - 1);
 }
 
-int strlen_recursion(char *s)
+int strlen_recursion(char *str)
 {
 	
-	if (*s != '\0')
+	if (*str != '\0')
 	{
-		return (1 + strlen_recursion(s + 1));
+		return (1 + strlen_recursion(str + 1));
 	}
 	else
 	{
