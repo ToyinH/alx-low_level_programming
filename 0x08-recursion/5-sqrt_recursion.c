@@ -4,7 +4,6 @@
 
 /**
  * _sqrt_recursion - function that returns the natural square root of a number
- * @n: the number
  *
  * Description: y^2 = n, so n/y = y
  * so guessing, when n/g = g, that is the squareroot
