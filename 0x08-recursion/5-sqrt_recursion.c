@@ -4,9 +4,13 @@
 
 /**
  * _sqrt_recursion - function that returns the natural square root of a number
- * @n: the number to find its squareroot
- * y^2 = n, so n/y = y,
+ * @n: the number
+ *
+ * Description: y^2 = n, so n/y = y
  * so guessing, when n/g = g, that is the squareroot
+ * @x: the number to find its squareroot
+ * @g: the guess number
+ *
  * Return: the square of the number
  */
 
@@ -32,8 +36,9 @@ int _sqrt_recursion(int n)
 
 /**
  * test - function to test the guess
- * @x - the number to find its square root
+ * @x: the number to find its square root
  * @g: the guess
+ *
  * Return: the squareroot
  */
 
@@ -54,6 +59,7 @@ double test(double x, double g)
  * @a: the number which represent x/g
  * @b: the guess since x/g should be close to g
  * if equal, it is the square root
+ *
  * Return: true or false
  */
 
@@ -73,6 +79,7 @@ bool closeEnough(double a, double b)
  * betterGuess - function that returns better guess
  * @x: the number to find its square root
  * @g: the guess number
+ *
  * Return: the better guess
  */
 double betterGuess(double x, double g)
