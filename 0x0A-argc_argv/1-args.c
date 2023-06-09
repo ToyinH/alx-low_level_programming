@@ -9,8 +9,12 @@
  * Return: return 0 if successful
  */
 
-int main(int argc)
+int main(int argc, char *argv[])
 {
+	if (argv == NULL)
+	{
+		return (1);
+	}
 	printf("%d\n", (argc - 1));
 	return (0);
 }
