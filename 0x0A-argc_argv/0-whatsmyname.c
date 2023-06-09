@@ -2,8 +2,11 @@
 #include <stdio.h>
 
 /**
+ * main - function that takes command line
+ * @argc: argument count
+ * @argv: argument vector
  *
- *
+ * Return: 0 if successful or 1 if not
  */
 
 int main(int argc, char *argv[])
