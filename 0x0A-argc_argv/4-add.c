@@ -28,9 +28,13 @@ int main(int argc, char *argv[])
 	{
 		int x = atoi(argv[i]);
 
-		if (x <= 0)
+		if (x == 0)
 		{
 			printf("Error\n");
+			return (1);
+		}
+		else if (x < 0)
+		{
 			return (1);
 		}
 
