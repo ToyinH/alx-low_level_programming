@@ -29,7 +29,6 @@ int main(int argc, char *argv[])
 	for (i = 1; i < argc; i++)
 	{
 		char *str = argv[i];
-		
 		for (j = 0; str[j] != '\0'; j++)
 		{
 			if (!isdigit(str[j]))
