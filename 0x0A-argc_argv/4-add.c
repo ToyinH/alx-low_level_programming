@@ -12,6 +12,8 @@
 
 int main(int argc, char *argv[])
 {
+	int i, sum;
+
 	if (argv == NULL)
 	{
 		return (2);
@@ -21,8 +23,6 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
-
-	int i, sum;
 
 	for (i = 1; i < argc; i++)
 	{
