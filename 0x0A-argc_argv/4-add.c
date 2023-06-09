@@ -27,8 +27,16 @@ int main(int argc, char *argv[])
 	for (i = 1; i < argc; i++)
 	{
 		int x = atoi(argv[i]);
+
+		if (x <= 0)
+		{
+			printf("Error\n");
+			return (1);
+		}
+
 		sum += x;
 	}
+
 	printf("%d\n", sum);
 	return (0);
 }
