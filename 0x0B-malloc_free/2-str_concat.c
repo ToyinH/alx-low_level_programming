@@ -2,9 +2,7 @@
 #include <stdlib.h>
 /**
  * *str_concat - function that concatenates two strings
- * @s1: string 1
- * @s2: string 2
- *
+ *@str: string
  * Return: pointer or NULL
  */
 int len(char *str);
