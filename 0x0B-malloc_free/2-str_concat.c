@@ -6,10 +6,13 @@
  * @s2: string 2
  * Return: pointer or NULL
  *
+ *
  */
+int len (char *str);
+
 char *str_concat(char *s1, char *s2)
 {
-	int i, j, k, strlen1, strlen2, strlen3;
+	int k, strlen1, strlen2, strlen3;
 	char *s3;
 
 	if (s1 == NULL)
@@ -21,17 +24,8 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 	}
 
-	for (i = 0; s1[i] != '\0'; i++)
-	{
-		i++;
-	}
-	strlen1 = i;
-
-	for (j = 0; s2[j] != '\0'; j++)
-	{
-		j++;
-	}
-	strlen2 = j;
+	strlen1 = len(s1);
+	strlen2 = len(s2);
 
 	s3 = malloc((strlen1 + strlen2 + 1) * sizeof(char));
 	if (s3 == NULL)
@@ -55,4 +49,15 @@ char *str_concat(char *s1, char *s2)
 	s3[k] = '\0';
 
 	return (s3);
+}
+
+int len(char *str)
+{
+	int i = 0;
+
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return i;
 }
