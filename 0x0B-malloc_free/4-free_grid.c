@@ -14,11 +14,11 @@ int **alloc_grid(int width, int height);
 
 void free_grid(int **grid, int height)
 {
-	int i, j;
+	int a;
 
-	for (i = 0; i < height; i++)
+	for (a = 0; a < height; a++)
 	{
-		free(grid[i]);
+		free(grid[a]);
 	}
 	free(grid);
 }
