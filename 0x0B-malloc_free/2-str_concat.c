@@ -41,7 +41,7 @@ char *str_concat(char *s1, char *s2)
 
 	strlen3 = strlen1 + strlen2;
 
-	for (k = 0; k < strlen3; k++)
+	for (k = 0; k < strlen3 + 1; k++)
 	{
 		if (k < strlen1)
 		{
@@ -52,7 +52,7 @@ char *str_concat(char *s1, char *s2)
 			s3[k] = s2[k];
 		}
 	}
-	s3[k] = '\0';
+	//s3[k] = '\0';
 
 	return (s3);
 }
