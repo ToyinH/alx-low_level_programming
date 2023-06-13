@@ -3,12 +3,11 @@
 #include "main.h"
 
 /**
- * alloc_grid - function that returns a pointer to a 2 dimensional
- * array of integers
- * @width: width of grid
+ * free_grid - function that frees 2 dimension array previously created
+ * @grid: 2 dimensional array
  * @height: height of grid
  *
- * Return: return pointer to 2 dimensional array or NULL if failed
+ * Return: no return
  */
 
 void free_grid(int **grid, int height)
