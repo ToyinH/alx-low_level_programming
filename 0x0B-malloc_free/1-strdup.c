@@ -32,7 +32,7 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-	for (j = 0; j < (strlen + 1); j++)
+	for (j = 0; j < (strlen); j++)
 	{
 		str2[j] = str[j];
 	}
