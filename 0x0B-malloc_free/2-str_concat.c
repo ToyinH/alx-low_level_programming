@@ -4,11 +4,10 @@
  * *str_concat - function that concatenates two strings
  * @s1: string 1
  * @s2: string 2
+ *
  * Return: pointer or NULL
- *
- *
  */
-int len (char *str);
+int len(char *str);
 
 char *str_concat(char *s1, char *s2)
 {
@@ -50,6 +49,12 @@ char *str_concat(char *s1, char *s2)
 
 	return (s3);
 }
+/**
+ * len - function which returns lenght of string
+ * @str: string
+ *
+ * Return: return length of string
+ */
 
 int len(char *str)
 {
@@ -59,5 +64,5 @@ int len(char *str)
 	{
 		i++;
 	}
-	return i;
+	return (i);
 }
