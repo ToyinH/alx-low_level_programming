@@ -4,9 +4,7 @@
 
 /**
  * argstostr - function that concatenates all the arguments of your program
- * @ac: argument count
- * @av: argument vector
- *
+ * @s: string
  * Return: return pointer to string
  */
 int get_str_len(char *s);
@@ -30,7 +28,12 @@ char *argstostr(int ac, char **av)
 	}
 
 	new_str = malloc((sizeof(char) * total_len) + 1);
-	
+
+	if (new_str == NULL)
+	{
+		return (NULL);
+	}
+
 	for (j = 0; j < ac; j++)
 	{
 		copy_string((new_str + position), av[j]);
@@ -40,6 +43,12 @@ char *argstostr(int ac, char **av)
 	new_str[position] = '\0';
 	return (new_str);
 }
+/**
+ * get_str_len - function to get string lenght
+ * @s: string
+ *
+ * Return: return string lenght
+ */
 
 int get_str_len(char *s)
 {
@@ -51,6 +60,13 @@ int get_str_len(char *s)
 	}
 	return (len);
 }
+/**
+ * copy_string - function to copy string
+ * @dest: destination string
+ * @src: string to copy
+ *
+ * Return: no return
+ */
 
 void copy_string(char *dest, char *src)
 {
