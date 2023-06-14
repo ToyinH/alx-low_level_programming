@@ -39,7 +39,6 @@ char **strtow(char *str)
 		}
 	}
 	grid1[word_num][position] = '\0';
-	grid1[word_num +1] = NULL;
 	return (grid1);
 }
 
