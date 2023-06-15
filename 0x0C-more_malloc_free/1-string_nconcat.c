@@ -20,33 +20,22 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s1 = "";
 	}
+
 	if (s2 == NULL)
 	{
 		s2 = "";
 	}
 
-	if (n < s2_length)
-	{
-		new_string = malloc(sizeof(char) * (s1_length + n) + 1);
-		if (new_string == NULL)
-		{
-		return (NULL);
-		}
-	}
-
-	else if (n >= s2_length)
-	{
-		new_string = malloc(sizeof(char) * ((s1_length + s2_length) + 1));
-
-		if (new_string == NULL)
-		{
-			return (NULL);
-		}
-	}
-
 	if (n >= s2_length)
 	{
 		n = s2_length;
+	}
+	
+	new_string = (char *)malloc(sizeof(char) * (s1_length + n) + 1);
+	
+	if (new_string == NULL)
+	{
+		return (NULL);
 	}
 
 	new_string_length = s1_length + n + 1;
