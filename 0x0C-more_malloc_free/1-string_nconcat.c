@@ -1,37 +1,70 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
 /**
- * *string_nconcat - function that concatenates two strings which contains
- * s1 followed by the first n bytes of s2 and null terminated
- * @s1: string 1
- * @s2: string 2
- * @n: n bytes
- * Return: return NULL if function fails else return pointer to memory
- *
+ ** string_nconcat - function that concatenates two strings
+ *@str: string
+ * Return: pointer or NULL
  */
+
+int len(char *str);
+
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *a;
 	unsigned int i, j;
-	unsigned int strlen1;
+	unsigned int new_string_length;
+	char *new_string;
+	unsigned int s1_length = len(s1);
+	unsigned int s2_length = len(s2);
 
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
-	for (i = 0, strlen1 = 0; s1[i] != '\0'; i++)
-		strlen1++;
-	a = malloc(sizeof(char) * (strlen1 + n) + 1);
-	if (a == NULL)
-		return (NULL);
-	for (i = 0, j = 0; i < (strlen1 + n + 1); i++)
+	if (n < s2_length)
 	{
-		if (i < strlen1)
-			a[i] = s1[i];
-		else
-			a[i] = s2[j++];
+		new_string = malloc(sizeof(char) * (s1_length + n) +1);
+		if (new_string == NULL)
+		{
+		return (NULL);
+		}
 	}
-	a[i] = '\0';
-	return (a);
+	else if (n >= s2_length)
+	{
+		new_string = malloc(sizeof(char) * ((s1_length + s2_length) + 1));
+	}
+
+	if (n >= s2_length)
+	{
+		n = s2_length;
+	}
+
+	new_string_length = s1_length + n + 1;
+
+	for (i = 0, j = 0; i < new_string_length; i++)
+	{
+		if (i < s1_length)
+		{
+			new_string[i] = s1[i];
+		}
+		else
+		{
+			new_string[i] = s2[j];
+			j++;
+		}
+	}
+	new_string[i] = '\0';
+	return (new_string);
+}
+/**
+ * len - function which returns lenght of string
+ * @str: string
+ *
+ * Return: return length of string
+ */
+
+int len(char *str)
+{
+	int i = 0;
+
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
