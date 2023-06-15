@@ -43,9 +43,10 @@ int word_index = 0;
 while (str[i] != '\0')
 {
 	while (str[i] == ' ')
-		i++;
-}
-if (str[i] != '\0')
+	{
+		i++
+	}
+	if (str[i] != '\0')
 {
 	int start = i;
 	int word_length = 0;
@@ -70,3 +71,4 @@ if (words[word_index] == NULL)
 }
 words[word_count] = NULL;
 return (words);
+}
