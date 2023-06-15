@@ -5,63 +5,68 @@
 /**
  *
  */
-char **allocate_mem(char *s);
-
 char **strtow(char *str)
 {
-	int i;
-	int word_num = 0;
-	int position = 0;
-
-	char **grid1 = allocate_mem(str);
-	if (grid1 == NULL)
-	{
-		return (NULL);
-	}
+	int i = 0;
+	int word_count = 0;
 
 	if (str == NULL || str[0] == '\0')
 	{
 		return (NULL);
 	}
-
-	for (i = 0; str[i] != '\0'; i++)
+	while (str[i] != '\0')
 	{
-		if (str[i] == ' ')
+		while (str[i] = ' ')
 		{
-			grid1[word_num][i] = '\0';
-			word_num++;
-			position = 0;
+			i++;
 		}
-		else
-		{
-			grid1[word_num][position] = str[i];
-			position++;
-		}
-	}
-	grid1[word_num][position] = '\0';
-	return (grid1);
-}
-
-char **allocate_mem(char *s)
-{
-	int i;
-	int word_count = 0;
-	char **grid;
-
-	for (i = 0; s[i] != '\0'; i++)
-	{
-		if (s[i] == ' ')
+		if (str[i] != '\0')
 		{
 			word_count++;
 		}
-	}
-	grid = (char **)malloc(sizeof(char *) * (word_count + 1)); 
-	/* +1 for the NULL element*/
-	{
-		if (grid == NULL)
+		while (str[i] != ' ' && str[i] != '\0')
 		{
-			return (NULL);
+			i++;
 		}
 	}
-	return (grid);
 }
+
+char **words = (char **)malloc(sizeof(char *) * (word_count + 1));
+if (words == NULL)
+{
+	return (NULL);
+}
+
+i = 0;
+int word_index = 0;
+
+while (str[i] != '\0')
+{
+	while (str[i] == ' ')
+		i++;
+}
+if (str[i] != '\0')
+{
+	int start = i;
+	int word_length = 0;
+}
+while (str[i] != ' ' && str[i] != '\0')
+{
+	i++;
+	word_length++;
+}
+words[word_index] = (char *)malloc((word_length + 1) * sizeof(char));
+if (words[word_index] == NULL)
+{
+	for (int j = 0; j < word_index; j++)
+	{
+		free(words[j]);
+	}
+	free(words);
+	return(NULL);
+	strncpy(words[word_index], str + start, word_length);
+	words[word_index][word_length] = '\0';
+	word_index++;
+}
+words[word_count] = NULL;
+return (words);
