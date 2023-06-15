@@ -3,7 +3,11 @@
 #include <string.h>
 #include "main.h"
 /**
+ * _calloc - function that allocates memory for an array using malloc
+ * @nmemb: number of elements of array
+ * @size: size of each element
  *
+ * Return: return void pointer to memory
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
