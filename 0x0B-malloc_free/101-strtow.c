@@ -5,6 +5,8 @@
 /**
  *
  */
+char *strncpy_custom(const char *src, int n);
+
 char **strtow(char *str)
 {
 	int i = 0;
@@ -65,10 +67,30 @@ if (words[word_index] == NULL)
 	}
 	free(words);
 	return(NULL);
-	strncpy(words[word_index], str + start, word_length);
+	strncpy_custom(words[word_index], str + start, word_length);
 	words[word_index][word_length] = '\0';
 	word_index++;
 }
 words[word_count] = NULL;
 return (words);
+}
+
+char *strncpy_custom(const char *src, int n)
+{
+	char *dest = (char *)malloc((n + 1) * sizeof(char));
+	if (dest == NULL)
+	{
+		return NULL;
+	}
+	int i;
+	for (i = 0; i < n && src[i] != '\0'; i++)
+	{
+		dest[i] = src[i];
+	}
+	for (; i < n; i++)
+	{
+		dest[i] = '\0';
+	}
+	dest[n] = '\0';
+	return dest;
 }
