@@ -62,7 +62,6 @@ char **strtow(char *str)
 				word_length++;
 				i++;
 			}
-		}
 
 		words[word_index] = (char *)malloc(sizeof(char) * (word_length + 1));
 		if (words[word_index] == NULL)
@@ -74,9 +73,10 @@ char **strtow(char *str)
 			free(words);
 			return (NULL);
 		}
-		strcpy(words[word_index], str + start);
+		strncpy(words[word_index], str + start, word_length);
 		words[word_index][word_length] = '\0';
 		word_index++;
+		}
 	}
 	words[word_count] = NULL;
 	return (words);
