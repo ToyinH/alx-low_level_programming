@@ -74,7 +74,7 @@ char **strtow(char *str)
 			free(words);
 			return (NULL);
 		}
-		strncpy(words[word_index], str + start, word_length);
+		strcpy(words[word_index], str + start);
 		words[word_index][word_length] = '\0';
 		word_index++;
 	}
