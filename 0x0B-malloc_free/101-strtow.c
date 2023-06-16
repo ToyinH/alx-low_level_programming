@@ -33,12 +33,13 @@ char **strtow(char *str)
 		if (str[i] != '\0')
 		{
 			word_count++;
-		}
-		while (str[i] != ' ' && str[i] != '\0')
-		{
-			i++;
+			while (str[i] != ' ' && str[i] != '\0')
+			{
+				i++;
+			}
 		}
 	}
+
 	words = (char **)malloc(sizeof(char *) * (word_count + 1));
 	if (words == NULL)
 	{
@@ -56,20 +57,22 @@ char **strtow(char *str)
 		if (str[i] != '\0')
 		{
 			start = i;
+			while (str[i] != ' ' && str[i] != '\0')
+			{
+				word_length++;
+				i++;
+			}
 		}
-		while (str[i] != ' ' && str[i] != '\0')
-		{
-			word_length++;
-			i++;
-		}
+
 		words[word_index] = (char *)malloc(sizeof(char) * (word_length + 1));
 		if (words[word_index] == NULL)
 		{
 			for (j = 0; j < word_index; j++)
 			{
 				free(words[j]);
-				return (NULL);
 			}
+			free(words);
+			return (NULL);
 		}
 		strncpy(words[word_index], str + start, word_length);
 		words[word_index][word_length] = '\0';
