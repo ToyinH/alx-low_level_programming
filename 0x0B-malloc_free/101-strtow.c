@@ -19,7 +19,7 @@ char **strtow(char *str)
 	int word_length = 0;
 	int start, j;
 
-	if (str == NULL || *str == '\0')
+	if (str == NULL || strcmp(str, "") == 0)
 	{
 		return (NULL);
 	}
@@ -30,9 +30,11 @@ char **strtow(char *str)
 		{
 			i++;
 		}
+
 		if (str[i] != '\0')
 		{
 			word_count++;
+
 			while (str[i] != ' ' && str[i] != '\0')
 			{
 				i++;
@@ -57,6 +59,7 @@ char **strtow(char *str)
 		if (str[i] != '\0')
 		{
 			start = i;
+
 			while (str[i] != ' ' && str[i] != '\0')
 			{
 				word_length++;
