@@ -20,12 +20,14 @@ int main(int argc, char *argv[])
 	if (argc != 3)
 	{
 		printf("Error\n");
-		exit(98);
+		/*exit(98);*/
+		return (1);
 	}
 	if (!isdigit(num1) || !isdigit(num2))
 	{
 		printf("Error\n");
-		exit(98);
+		/*exit(98);*/
+		return (1);
 	}
 	result = mul(num1, num2);
 	printf("%d\n", result);
