@@ -27,7 +27,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	/*create memory to store name, free mem and return NULL if it failed*/
 	name_lent = len(name);
-	name = (char *)malloc(sizeof(name_lent) + 1);
+	name = (char *)malloc(sizeof(char) * (name_lent + 1));
 	if (name == NULL)
 	{
 		free(create_dog);
@@ -36,7 +36,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	/*create memory to store owner, free mem and return NULL if it failed*/
 	owner_lent = len(owner);
-	owner = (char *)malloc(sizeof(owner_lent) + 1);
+	owner = (char *)malloc(sizeof(char) * (owner_lent + 1));
 	if (owner == NULL)
 	{
 		free(name);
