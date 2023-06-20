@@ -15,6 +15,8 @@ int len(char *string);
 char *string_copy(char *s1, char *s2);
 dog_t *new_dog(char *name, float age, char *owner)
 {
+	int name_lent;
+	int owner_lent;
 	dog_t *create_dog;
 
 	create_dog = (dog_t *) malloc(sizeof(dog_t));
@@ -23,10 +25,30 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
+	/*create memory to store name, free mem and return NULL if it failed*/
+	name_lent = len(name);
+	name = (char *)malloc(sizeof(name_lent) + 1);
+	if (name == NULL)
+	{
+		free(create_dog);
+		return (NULL);
+	}
 
-	create_dog->name = name;
+	/*create memory to store owner, free mem and return NULL if it failed*/
+	owner_lent = len(owner);
+	owner = (char *)malloc(sizeof(owner_lent) + 1);
+	if (owner == NULL)
+	{
+		free(name);
+		free(create_dog);
+		return (NULL);
+	}
+
+	/*copy entered string into new dog created*/
+	
+	create_dog->name = string_copy(create_dog->name, name);
 	create_dog->age = age;
-	create_dog->owner = owner;
+	create_dog->owner = string_copy(create_dog->owner, owner);
 
 	return (create_dog);
 }
