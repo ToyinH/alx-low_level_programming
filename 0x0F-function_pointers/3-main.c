@@ -22,11 +22,11 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	if (get_op_func(op) == NULL)
+	/**if (get_op_func(op) == NULL)
 	{
 		printf("Error\n");
 		exit(99);
-	}
+	}*/
 	if ((*op == '/' || *op == '*') && (num2 == 0))
 	{
 		printf("Error\n");
