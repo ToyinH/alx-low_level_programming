@@ -40,8 +40,11 @@ int print_opcodes(int num_bytes)
 
 	for (i = 0; i < num_bytes; i++)
 	{
+		if (i == (num_bytes - 1))
+		{
+			printf("%02hhx\n", ptr[i]);
+		}
 		printf("%02hhx ", ptr[i]);
 	}
-	printf("\n");
 	return (0);
 }
