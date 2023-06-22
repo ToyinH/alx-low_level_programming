@@ -1,12 +1,9 @@
 #include <stdarg.h>
 #include <stdio.h>
-#include <string.h>
-#include "variadic_functions.h"
 /**
  * print_all - function that print anything
  * @format: list of types of arguments passed which are characters of string
  */
-
 void print_all(const char * const format, ...)
 {
 	int i;
@@ -15,7 +12,6 @@ void print_all(const char * const format, ...)
 	char *sep = "";
 
 	va_start(args, format);
-
 	if (format)
 	{
 		while (format[i])
@@ -33,11 +29,8 @@ void print_all(const char * const format, ...)
 					break;
 				case 's':
 					str = va_arg(args, char *);
-
 					if (str == NULL)
-					{
 						str = "(nil)";
-					}
 					printf("%s%s", sep, str);
 					break;
 				default:
