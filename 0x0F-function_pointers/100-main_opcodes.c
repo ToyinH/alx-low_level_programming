@@ -48,6 +48,7 @@ void print_opcodes(int num_bytes)
 		if (i == (num_bytes - 1))
 		{
 			printf("%02x\n", ptr[i]);
+			break;
 		}
 		printf("%02x ", ptr[i]);
 	}
