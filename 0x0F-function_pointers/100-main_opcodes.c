@@ -38,6 +38,11 @@ int print_opcodes(int num_bytes)
 	int i;
 	unsigned char *ptr = (unsigned char *)print_opcodes;
 
+	if (ptr == NULL || print_opcodes == NULL)
+	{
+		return (1);
+	}
+
 	for (i = 0; i < num_bytes; i++)
 	{
 		if (i == (num_bytes - 1))
