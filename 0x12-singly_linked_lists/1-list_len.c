@@ -3,22 +3,22 @@
 #include <stdlib.h>
 /**
  * list_len - function that returns the number of elements
- * in a liked list_t list.
+ * in a linked list_t list.
  * @h: head of linked list
+ *
  * Return: return number of elements
  */
 
 size_t list_len(const list_t *h)
 {
-	const list_t *current;
-	size_t c;
+	const list_t *temp;
+	size_t count = 0;
 
-	c = 0;
-	current = h;
-	while (current != NULL)
+	temp = h;
+	while (temp != NULL)
 	{
-		current = current->next;
-		c++;
+		temp = temp->next;
+		count++;
 	}
-	return (c);
+	return (count);
 }
