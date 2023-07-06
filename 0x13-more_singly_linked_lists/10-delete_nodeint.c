@@ -7,34 +7,32 @@
  *
  * Return: return 1 if successful
  */
+
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	unsigned int i = 0;
-	listint_t *temp;
+	listint_t *temp, *temp2 = NULL;
 
 	if (head == NULL || *head == NULL)
-		return (0);
+		return (-1);
 	temp = *head;
-
-	if (index == 0)
+	while (i < index && temp != NULL)
 	{
-		free(*head);
+		temp2 = temp;
+		temp = temp->next;
+		i++;
+	}
+	if (temp == NULL)
+	{
+		return (-1);
+	}
+	else if (temp2 != NULL)
+	{
+		temp2->next = temp->next;
 	}
 	else
-	{
-		while (i < index - 1 && temp != NULL)
-		{
-			temp = temp->next;
-			i++;
-		}
-		if (temp == NULL)
-		{
-			return (-1);
-		}
-		else
-		{
-			free(temp->next);
-		}
-	}
+		*head = temp->next;
+	free(temp);
+
 	return (1);
 }
