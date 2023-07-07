@@ -10,7 +10,7 @@ int get_endianness(void)
 	char *ch = (char *)&num;
 
 	if (*ch == 1)
-		return (1); /*little endian*/
-	else if (*ch == 0)
-		return (0); /*big endian*/
+		return (1);
+	else
+		return (0);
 }
