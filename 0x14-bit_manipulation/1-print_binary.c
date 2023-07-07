@@ -11,7 +11,6 @@ void print_binary(unsigned long int n)
 	int count = 0;
 
 	bit_size = sizeof(unsigned long int) * 8;
-	
 	for (i = (bit_size - 1); i >= 0; i--)
 	{
 		unmask = n >> i;
