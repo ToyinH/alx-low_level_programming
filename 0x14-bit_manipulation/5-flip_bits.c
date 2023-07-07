@@ -14,7 +14,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned long int temp;
 	unsigned long int exor = n ^ m;
 
-	for (i = 63; i >=0; i--)
+	for (i = 63; i >= 0; i--)
 	{
 		temp = exor >> i;
 		if (temp & 1)
