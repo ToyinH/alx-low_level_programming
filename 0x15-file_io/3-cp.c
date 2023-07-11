@@ -23,7 +23,7 @@ int main(int argc, char **argv)
 	count_r = read(fd_from, buf, BUF_SIZE);
 	fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	do {
-		if (fd_from == -1 || count_r == -1)
+		if (file_from == NULL || fd_from == -1 || count_r == -1)
 		{
 			dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 			exit(98);
