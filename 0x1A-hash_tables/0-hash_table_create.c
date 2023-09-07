@@ -8,6 +8,7 @@
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *new_table;
+	unsigned long int i;
 
 	/* allocating space to the table and array of nodes within it*/
 	/* using calloc sets each member pointer to zero or NULL */
@@ -22,6 +23,10 @@ hash_table_t *hash_table_create(unsigned long int size)
 	{
 		free(new_table);
 		return (NULL);
+	}
+	for (i = 0; i < size; i++)
+	{
+		new_table->array[i] = NULL;
 	}
 	return (new_table);
 }
