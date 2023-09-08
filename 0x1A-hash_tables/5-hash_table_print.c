@@ -17,7 +17,7 @@ void hash_table_print(const hash_table_t *ht)
 	while (i < ht->size)
 	{
 		current = ht->array[i];
-		if (word < 1)
+		if (word < 1) /*print the first key and value*/
 		{
 			while (current != NULL)
 			{
