@@ -27,7 +27,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 				return (0);
 			free(current->value);
 			current->value = new_value;
-			printf("key: %s value: %s\n", current->key, current->value);
 			return (1);
 		}
 		current = current->next;
@@ -51,6 +50,5 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	new_node->next = ht->array[index];
 	ht->array[index] = new_node;
-	printf("key: %s value: %s\n", new_node->key, new_node->value);
 	return (1);
 }
