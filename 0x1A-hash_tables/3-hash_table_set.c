@@ -24,9 +24,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_node->key = strdup(key);
 	new_node->value = strdup(value);
 	new_node->next = NULL;
-
-	
 	index = key_index((const unsigned char *)key, ht->size);
+	printf("index: %lu\n", index);
 	table_node = ht->array[index];
 	if (table_node == NULL)
 	{
@@ -50,5 +49,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			}
 		}
 	}
+	printf("key: %s value: %s\n", table_node->key, table_node->value);
 	return (1);
 }
