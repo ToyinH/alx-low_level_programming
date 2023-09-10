@@ -61,6 +61,7 @@ typedef struct shash_node_s
  * because we want our HashTable to use a Chaining collision handling
  * @shead: A pointer to the first element of the sorted linked list
  * @stail: A pointer to the last element of the sorted linked list
+ * @array: array
  */
 typedef struct shash_table_s
 {
