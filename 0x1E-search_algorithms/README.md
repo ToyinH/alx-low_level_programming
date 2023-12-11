@@ -23,7 +23,8 @@ the space complexity (worst case) of a binary search in an array of size n
 ## 6. Big O #4
 the space complexity of this function / algorithm
 
-`int **allocate_map(int n, int m)
+`
+int **allocate_map(int n, int m)
 {
      int **map;
 
@@ -33,4 +34,5 @@ the space complexity of this function / algorithm
           map[i] = malloc(sizeof(int) * m);
      }
      return (map);
-}`
+}
+`
