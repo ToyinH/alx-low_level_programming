@@ -15,12 +15,12 @@ int binary_search(int *array, size_t size, int value)
 	size_t right = size - 1;
 	size_t mid;
 
+	print_array(array, left, right);
+
 	if (array == NULL)
 	{
 		return (-1);
 	}
-
-	print_array(array, left, right);
 
 	while (left < right)
 	{
