@@ -17,7 +17,11 @@ int exponential_search(int *array, size_t size, int value)
 		return (-1);
 
 	if (array[0] == value)
+	{
+		printf("Value checked array[0] = [0]\n");
 		return (0);
+	}
+
 	while (current < (int)size)
 	{
 		printf("Value checked array[%d] = [%d]\n", current, array[current]);
@@ -29,7 +33,7 @@ int exponential_search(int *array, size_t size, int value)
 			current = current * 2;
 			if (array[current] > value)
 			{
-				return (binary_search1(array, prev, current, value));
+				return (binary_search1(array, prev, current - 1, value));
 			}
 		}
 		else
