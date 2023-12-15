@@ -33,12 +33,12 @@ int exponential_search(int *array, size_t size, int value)
 			current = current * 2;
 			if (array[current] > value)
 			{
-				return (binary_search1(array, prev, current - 1, value));
+				return (binary_search1(array, prev, current, value));
 			}
 		}
 		else
 		{
-			return (binary_search1(array, prev, current - 1, value));
+			return (binary_search1(array, prev, current, value));
 		}
 	}
 	return (binary_search1(array, prev, current - 1, value));
