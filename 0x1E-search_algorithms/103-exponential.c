@@ -11,7 +11,7 @@
 
 int exponential_search(int *array, size_t size, int value)
 {
-	int prev = 1, current = 1, current2 = 2;
+	int prev = 1, current = 1, current2 = 2, max_index = (int)size - 1;
 
 	if (array == NULL)
 		return (-1);
@@ -34,9 +34,9 @@ int exponential_search(int *array, size_t size, int value)
 		{
 			prev = current;
 			current = current * 2;
-			if (array[current] > value && current > (int)size - 1)
+			if (current > max_index)
 			{
-				return (binary_search1(array, prev, (int)size - 1, value));
+				return (binary_search1(array, prev, max_index, value));
 			}
 
 			if (array[current] > value)
@@ -50,7 +50,7 @@ int exponential_search(int *array, size_t size, int value)
 			return (binary_search1(array, prev, current - 1, value));
 		}
 	}
-	return (binary_search1(array, prev, (int)size - 1, value));
+	return (binary_search1(array, prev, max_index, value));
 	return (-1);
 }
 
